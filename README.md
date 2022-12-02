@@ -21,10 +21,15 @@ wrk -t12 -c400 -d30s --latency http://127.0.0.1:3000
 
 > ## `fastify`
 
-wrk -t12 -c400 -d30s --latency http://127.0.0.1:4000
+wrk -t12 -c400 -d30s --latency http://127.0.0.1:3001
 ![image](https://user-images.githubusercontent.com/44765540/204584501-2a6b3daf-3a55-44ac-b979-63a45631981e.png)
 
 > ## `golang`
 
-wrk -t12 -c400 -d30s --latency http://127.0.0.1:5000
+wrk -t12 -c400 -d30s --latency http://127.0.0.1:3002
 ![image](https://user-images.githubusercontent.com/44765540/204583808-d8a61f7e-468c-411c-9497-54375c32bd2c.png)
+
+> ## `elixir`
+
+wrk -t12 -c400 -d30s --latency http://127.0.0.1:3003
+![image](https://user-images.githubusercontent.com/44765540/205230619-70687d5f-8b97-4fb8-b026-cf05f027ca59.png)
