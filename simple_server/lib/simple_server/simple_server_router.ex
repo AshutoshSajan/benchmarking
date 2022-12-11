@@ -10,7 +10,14 @@ defmodule SimpleServer.Router do
 
   # Simple GET Request handler for path /
   get "/" do
-    send_resp(conn, 200, Poison.encode!(%{"server" => "elixir"}))
+    t1 = :os.system_time(:millisecond)
+    res = Poison.encode!(%{"server" => "elixir"})
+    t2 = :os.system_time(:millisecond)
+
+    time_diff = t2 - t1
+    IO.inspect(time_diff, label: "time_diff")
+
+    send_resp(conn, 200, res)
   end
 
   # Simple GET Request handler for path /hello
