@@ -28,7 +28,7 @@ func main() {
 	http.HandleFunc("/", indexHandler)
 	fmt.Println("Server listening on port 5000")
 
-	err := http.ListenAndServe(":5000", nil)
+	err := http.ListenAndServe(":3002", nil)
 
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err)
